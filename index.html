@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Document Upload</title>
+    <style type="text/css">
+    
+body{
+	width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: arial;
+	background-color: #f2f2f2;
+}
+
+.nav{
+    width: 100%;
+    height: 49px;
+    background-color: #262626;
+}
+
+.nav a{
+  float: left;
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 26px;
+    font-size: 17px;
+    transition: 0.6s all;
+}
+
+.nav a:hover{
+    background-color: dodgerblue;
+}
+
+.nav .search{
+    float: right;
+}
+
+.nav input[type=search]{
+    padding: 6px;
+    margin-top: 8px;
+    border:none;
+    font-size: 17px;
+}
+
+.nav .search button{
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    margin-right: 16px;
+    border:none;
+    background-color: dodgerblue;
+    cursor: pointer;
+    transition: 0.6s all;
+}
+
+.nav .search button:hover{
+    background-color: dodgerblue;
+    color: #fff;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=file] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#product_form {
+	width:900px;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+}
+    </style>
+	<script type="text/javascript">
+		function validateForm()
+		{
+			var lot_number_check = document.getElementById("lot_number").value
+			if(lot_number_check.length < 4)
+				{
+					alert("Length too small");
+				}
+		}
+	</script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/products">Products</a>      
+        <div class="search">
+            <form id="search_form" method="GET" action="/">
+                <input type="search" placeholder="Search....." id="search_item" name="search_item">
+                <button>Search</button>
+            </form>
+        </div>
+	</div>
+	
+	<div id="product_form">
+	<form id="userForm" method="POST" action="/success.ejs">
+    <label for="l_num">Lot Number: </label>
+    <input type="text" id="lot_number" name="lot_number" placeholder="Enter Lot Number..">
+
+    <label for="p_num">Product Number: </label>
+    <input type="text" id="product_number" name="product_number" placeholder="Enter Lot Number..">
+	
+	<label for="pdf_File">Select File</label>
+    <input type="file" id="pdfFile" name="pdfFile">
+	
+    <input type="submit" value="Submit" onclick="validateForm()">
+  </form>
+</div>
+</body>
+
+</html>
