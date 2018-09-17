@@ -1,0 +1,37 @@
+{
+  "name": "Doc-upload-and-search",
+  "version": "0.1.0",
+  "description": "Doc-upload-and-search",
+  "main": "hello-world-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "author": "",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "couchbase": "^2.5.1",
+    "couchnode": "^4.3.4",
+    "document": "^0.4.7",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "get-form-data": "^2.0.0",
+    "hbs": "^4.0.1",
+    "http": "0.0.0",
+    "jquery": "^3.3.1",
+    "js-alert": "^1.0.4",
+    "multer": "^1.3.1",
+    "mysql": "^2.16.0",
+    "node-gyp": "^3.8.0",
+    "path": "^0.12.7",
+    "query-selector": "^1.0.9",
+    "uuid": "^3.3.2"
+  }
+}
